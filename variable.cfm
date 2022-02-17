@@ -14,3 +14,20 @@ roundAge=round(halfAge);
 <strong>Round</strong>
 #roundAge#<br>
 </cfoutput>
+
+<cfset firstName ="Nidhiya">
+<cfif firstName eq "Nidhiya">
+<cfoutput>
+i am #firstName#
+</cfoutput>
+<cfelse>
+i am not #firstName#
+</cfif>
+
+
+<cfif IsDefined("firstName")>
+  Hello #firstname#! 
+<cfelse>
+  Hello stranger!
+</cfif>
+
