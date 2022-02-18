@@ -28,6 +28,6 @@ myVar = #myVar# (loop has finished)<br>
 <cfloop collection="#myBooks#" item="subject">
   <cfoutput>
  #subject#: #StructFind(myBooks,subject)#<br />
- </cfoutput>
+ </cfoutput> 
 </cfloop>
 

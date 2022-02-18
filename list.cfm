@@ -66,4 +66,4 @@
     listToSort = "d,C,b,A" 
     sortedList = listToSort.listSort(compareNoCase) 
     writeDump(sortedList); 
-</cfscript> 
+</cfscript>        
