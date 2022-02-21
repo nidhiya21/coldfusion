@@ -14,7 +14,7 @@
 
 <BODY>
 
-<H2>Employee Records</H2>
+<H2>Employee Records</H2>  
 <CFOUTPUT><h1>#GetEmployeeInfo.RecordCount#</h1></CFOUTPUT>
 
 
