@@ -5,7 +5,7 @@
     ORDER BY d.dep_name  
     </cfquery> 
      
-    <cfdocument format="PDF"> 
+    <cfdocument format="PDF" filename="employee-details.pdf" overwrite="Yes"> 
         <cfoutput query="empSalary" group="dep_id"> 
             <cfdocumentsection> 
                 <cfdocumentitem type="header"> 
@@ -41,3 +41,5 @@
             </cfdocumentsection> 
         </cfoutput> 
     </cfdocument> 
+    <cfheader name="Content-Disposition" value="attachment; filename=employee-details.pdf">
+    <cfcontent type="application/pdf"  file="#expandPath('.')#\employee-details.pdf"><cfdocument format="PDF">Some text.</cfdocument>
