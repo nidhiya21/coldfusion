@@ -87,5 +87,53 @@ writeOutput("#key# => #value#<br />");
 myStruct=StructNew();
 myStruct = {a:1,b=2,c=3,d=4,e=5};
 myKeyList=StructKeyList(myStruct);
-
 </cfscript>
+
+<cfscript>
+myStruct=StructNew();
+myStruct.key1="Bugatti";
+myStruct.key2="Lamborghini";
+myStruct.key3="Maserati";
+WriteOutput("The input struct is:");
+WriteDump(myStruct);
+WriteOutput("struct has " & StructCount(myStruct) & " keys: " & StructKeyList(myStruct) & "");
+</cfscript>
+<!--- copy stucture --->
+
+<cfscript>
+myStruct=StructNew();
+myStruct.key1="Bugatti";
+myStruct.key2="Lamborghini";
+myStruct.key3="Maserati";
+myStruct.key4="Ferrari";
+myStruct.key5="Aprilia";
+myStruct.key5="Ducati";
+WriteOutput("The input struct is:");
+WriteDump(myStruct);
+WriteOutput("struct has " & StructCount(myStruct) & " keys: " & StructKeyList(myStruct) & "");
+</cfscript>
+
+<!--- sort --->
+<cfscript>
+myStruct=StructNew();
+myStruct.name1="Jeb";
+myStruct.name2="Bernie";
+myStruct.name3="Hillary";
+myStruct.name4="Donald";
+for ( i in StructSort(myStruct) ) {
+cfoutput(  ) {
+
+    writeOutput("#myStruct[i]#");
+}
+}
+</cfscript>
+<!--- merge --->
+<cfscript> 
+    obj1 ={ foo: 'bar', x: 42 }; 
+    obj2 ={ foo: 'baz', y: 13 }; 
+      
+    mergedObj = {...obj1, ...obj2, "key1":"23"}; 
+    writeDump(mergedObj); 
+</cfscript>
+
+
