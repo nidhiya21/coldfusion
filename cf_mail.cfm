@@ -2,14 +2,10 @@
     <title>Sending a simple e-mail</title>
     </head>
     <body>
-    <cfset URL.email="nidhiya21@gmail.com">
-    <h1>Sample e-mail</h1>
-    <cfmail
-    from="nidhiya.a@techversantinfo.com"
-    to="nidhiya21@gmail.com"
-    subject="Sample e-mail from ColdFusion">
-    
-    This is a sample e-mail message to show basic e-mail capability.
+    <h1>Sample e-mail</h1>  
+    <cfmail to="nidhiya21@gmail.com" from="rincekthoms@gmail.com" subject="Example email"> 
+    <cfmailparam file = "c:\web\myDoc.pdf" > 
+    This is a sample e-mail message to show basic e-mail capabilitys.
     
     </cfmail>
     The e-mail was sent.
